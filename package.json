@@ -1,19 +1,19 @@
 {
   "name": "ideal-react-starter",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": {
     "email": "azizsafudin@yahoo.com.sg",
     "name": "Abdul Aziz Safudin"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && npx tailwindcss -o dist/build.css --minify",
-    "test": "vitest",
     "lint": "prettier --write .",
     "precommit": "lint-staged",
+    "test": "vitest",
     "coverage": "vitest run --coverage",
-    "preview": "vite preview"
+    "build": "tsc && vite build",
+    "serve": "vite preview"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css}": [
@@ -23,7 +23,6 @@
     "**/*.ts?(x)": "bash -c tsc --noEmit'"
   },
   "dependencies": {
-    "@happy-dom/jest-environment": "^4.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-query": "^3.39.0",
