@@ -13,6 +13,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
+  globals: {
+    React: true,
+    jsdom: true,
+    JSX: true
+  },
   plugins: ['react', '@typescript-eslint', 'jest', 'unused-imports'],
   rules: {
     'react/react-in-jsx-scope': 0,
