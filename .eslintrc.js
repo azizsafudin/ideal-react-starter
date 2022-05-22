@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint', 'jest'],
+  plugins: ['react', '@typescript-eslint', 'jest', 'unused-imports'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/jsx-uses-react': 0,
@@ -40,6 +40,12 @@ module.exports = {
           'index'
         ]
       }
+    ],
+    'no-unused-vars': 'off',
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' }
     ]
   }
 }
