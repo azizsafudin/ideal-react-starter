@@ -24,22 +24,26 @@ module.exports = {
         ignoreDeclarationSort: true
       }
     ],
-    'space-before-function-paren': ['error', {
-      anonymous: 'never',
-      named: 'never',
-      asyncArrow: 'always'
-    }],
+    'import/newline-after-import': 'error',
+    'padding-line-between-statements': [
+      'warn',
+      { blankLine: 'always', prev: '*', next: 'block' },
+      { blankLine: 'always', prev: 'block', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'block-like' },
+      { blankLine: 'always', prev: 'block-like', next: '*' }
+    ],
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always'
+      }
+    ],
     'import/order': [
       'error',
       {
-        groups: [
-          'external',
-          'builtin',
-          'internal',
-          'sibling',
-          'parent',
-          'index'
-        ]
+        groups: ['external', 'builtin', 'internal', 'sibling', 'parent', 'index']
       }
     ],
     'no-unused-vars': 'off',
